@@ -158,7 +158,15 @@ public class HelloController {
         textBatteryLife.clear();
         checkHasStylus.setSelected(false);
         label.setText("");
+
+        // Switch to smartphone by default
         rdSmartphone.setSelected(true);
+
+        // Hiding additional fields
         hideAdditionalFields();
+
+        // Showing fields for a smartphone
+        showSmartphoneFields();
     }
+
 }
