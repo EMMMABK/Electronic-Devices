@@ -41,29 +41,44 @@ public class HelloController {
 
         listView.setItems(deviceList);
 
+        // Display RadioButton on your smartphone as selected by default
+        rdSmartphone.setSelected(true);
+        // Display fields for smartphone
+        showSmartphoneFields();
+    }
 
-        hideAdditionalFields();
+    private void showSmartphoneFields() {
+        textScreenSize.setVisible(true);
+        textCameraResolution.setVisible(true);
+        labelScreenSize.setVisible(true);
+        labelCameraResolution.setVisible(true);
     }
 
     @FXML
     private void onDeviceSelected(ActionEvent event) {
         hideAdditionalFields();
         if (rdSmartphone.isSelected()) {
-            textScreenSize.setVisible(true);
-            textCameraResolution.setVisible(true);
-            labelScreenSize.setVisible(true);
-            labelCameraResolution.setVisible(true);
+            showSmartphoneFields();
         } else if (rdLaptop.isSelected()) {
-            textRamSize.setVisible(true);
-            textProcessorType.setVisible(true);
-            labelRamSize.setVisible(true);
-            labelProcessorType.setVisible(true);
-        } else if (rdTablet.isSelected()) { // Tablet
-            textBatteryLife.setVisible(true);
-            checkHasStylus.setVisible(true);
-            labelBatteryLife.setVisible(true);
+            showLaptopFields();
+        } else if (rdTablet.isSelected()) {
+            showTabletFields();
         }
     }
+
+    private void showLaptopFields() {
+        textRamSize.setVisible(true);
+        textProcessorType.setVisible(true);
+        labelRamSize.setVisible(true);
+        labelProcessorType.setVisible(true);
+    }
+
+    private void showTabletFields() {
+        textBatteryLife.setVisible(true);
+        checkHasStylus.setVisible(true);
+        labelBatteryLife.setVisible(true);
+    }
+
 
     @FXML
     void onAddClick(ActionEvent event) {

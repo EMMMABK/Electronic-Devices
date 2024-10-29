@@ -51,7 +51,7 @@
                 <TextField fx:id="textWeight" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
                 <!-- Smartphone specific fields -->
-                <Label fx:id="labelScreenSize" text="Screen Size (inches)" textFill="#ffffff" visible="false" GridPane.rowIndex="3" />
+                <Label fx:id="labelScreenSize" prefHeight="17.0" prefWidth="109.0" text="Screen Size (inches)" textFill="#ffffff" visible="false" GridPane.rowIndex="3" />
                 <TextField fx:id="textScreenSize" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                 <Label fx:id="labelCameraResolution" text="Camera Resolution (MP)" textFill="#ffffff" visible="false" GridPane.rowIndex="4" />
                 <TextField fx:id="textCameraResolution" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
@@ -74,7 +74,7 @@
                 <Font name="System Bold" size="12.0" />
             </font>
         </Button>
-      <Label fx:id="label" layoutX="23.0" layoutY="407.0" prefHeight="37.0" prefWidth="288.0" text="Label" textFill="WHITE">
+      <Label fx:id="label" layoutX="23.0" layoutY="407.0" prefHeight="37.0" prefWidth="288.0" text="Notification" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
